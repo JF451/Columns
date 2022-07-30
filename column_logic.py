@@ -17,10 +17,15 @@ class Columns():
     def display_board(self):
         """Displays board with current faller and/or jewels on board"""
         for r in range(self.row):
+            print("|", end="")
             for c in range(self.col):
                 if self.board[r][c] == 0:
-                    print(".", end=" ")
-            print()
+                    print(" " * 3, end="")
+            print("|",end="\n")
+        for i in range(self.col * 3):
+            if i == 0:
+                print(" ",end="")
+            print("-",end="")
 
     def is_game_over(self, value):
         """Checks if losing condition is true"""
