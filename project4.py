@@ -3,8 +3,8 @@ from column_logic import Columns
 
 if __name__ == "__main__":
     #get rows amd columns from the user
-    rows = input()
-    cols = input()
+    rows = int(input())
+    cols = int(input())
 
     display_condition = input() # Condtions are empty board or board with jewels already in it
 
@@ -12,7 +12,7 @@ if __name__ == "__main__":
     columns = Columns(rows, cols, display_condition)
 
     #Loop until reach an ending condition
-    while not columns.is_game_over():
+    while not columns.game_over:
         #display board and get uder input
         columns.display_board()
 
